@@ -9,10 +9,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
+  <title>DFS JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <p class="dfs">This is David Sairai's JavaScript DrumKit</p>
 
   <div class="keys">
     <div data-key="65" class="key">
@@ -64,18 +66,19 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-function playSound(e){
-  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //looking at the 
-  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);//looking at the class key
-  if(!audio) return; // stops the function from running
-  audio.curentTime = 0;//reset the audio time and play it
-  audio.play();
-  key.classList.add('playing')
-};
-
-function removeTransition(e){
+  function removeTransition(e){
   if (e.propertyName !== 'transform') return; //skip if it is not a tranform
   this.classList.remove('playing');
+}
+
+function playSound(e){
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //looking at the 
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //looking at the class key
+  if(!audio) return; // stops the function from running
+
+  key.classList.add('playing');
+  audio.curentTime = 0; //reset the audio time and play it
+  audio.play();
 }
 
 const keys = document.querySelectorAll('.key');
