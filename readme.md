@@ -16,7 +16,7 @@ The starter files (available [here](https://github.com/wesbos/JavaScript30)) inc
 
 ## Table Of Contents
 
-1.  [JavaScript Drum Kit](/exercises/01%20-%20JavaScript%20Drum%20Kit)
+1.  [JavaScript Drum Kit](1%20-%20JavaScript%20Drum%20Kit)
 2.  [JS + CSS Clock](/exercises/02%20-%20JS%20%2B%20CSS%20Clock)
 3.  [CSS Variables](/exercises/03%20-%20CSS%20Variables)
 4.  [Array Cardio, Day 1](/exercises/04%20-%20Array%20Cardio%20Day%201/)
